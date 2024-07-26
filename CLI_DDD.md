@@ -33,6 +33,7 @@ more./SolutionName.sln # ??
 dotnet build
 dotnet add ./SB.Api/ reference ./SB.Contracts/ ./SB.App/
 dotnet add ./SB.Infra/ reference ./SB.App/
+dotnet add ./SB.Infra/ reference ./SB.Domain/
 dotnet add ./SB.App/ reference ./SB.Domain/
 dotnet add ./SB.Api/ reference ./SB.Infra/
 ```
@@ -51,23 +52,29 @@ dotnet user-secrets list --project ./SB.Api/
 ### EXTERNAL PACKAGES
 - Adding Packages to Specific Project
 ```bash
-dotnet add ./SB.Infra/ package Microsoft.Extensions.Configuration
-dotnet add ./SB.Infra/ package Microsoft.Extensions.Options.ConfigurationExtensions
-dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Authentication.JwtBearer
-
 dotnet add ./SB.App/ package OneOf # Drawback of Scalability used in App Layer
 dotnet add ./SB.App/ package FluentResults # It has Lack Some Ability of OneOf used in App Layer
-dotnet add ./SB.Domain/ package ErrorOr # Recommended and Final Approach
-dotnet add ./SB.App/ package MediatR
-dotnet add ./SB.App/ package MediatR.Extension.Microsoft.DependencyInjection
-dotnet add ./SB.App/ package Mapster
 dotnet add ./SB.App/ package FluentValidation
 dotnet add ./SB.App/ package FluentValidation.AspNetCore
+dotnet add ./SB.App/ package Mapster
+dotnet add ./SB.App/ package MediatR
+dotnet add ./SB.App/ package MediatR.Extension.Microsoft.DependencyInjection
+dotnet add ./SB.App/ package Microsoft.Extensions.DependencyInjection.Abstractionst
 
-dotnet add SB.Infra package Microsoft.EntityFrameworkCore 
-dotnet add SB.Infra package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add SB.Infra package Microsoft.EntityFrameworkCore.Design
-dotnet add SB.Api package Microsoft.EntityFrameworkCore.Design
+dotnet add ./SB.Domain/ package ErrorOr # Recommended and Final Approach
+
+dotnet add package DynamicExpressions.NET
+dotnet add package LinqKit.Core
+dotnet add package Microsoft.EntityFrameworkCore 
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.DynamicLinq
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+dotnet add package Microsoft.Extensions.Configuration
+dotnet add package Microsoft.Extensions.Options.ConfigurationExtensions
+dotnet add package X.PagedList.Mvc.Core
 ```
 ### GIT
 ```bash

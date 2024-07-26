@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SB.Infra.Entity.Attributez
+namespace SB.Domain.Entity.Attributez
 {
   public class RelateAttribute : Attribute
   {

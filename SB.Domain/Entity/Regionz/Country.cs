@@ -1,5 +1,4 @@
-﻿using SB.Domain.Entity.Attributez;
-using SB.Domain.Entity.Base;
+﻿using SB.Domain.Entity.Base;
 
 namespace SB.Domain.Entity.Regionz
 {

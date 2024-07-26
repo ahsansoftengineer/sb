@@ -1,5 +1,5 @@
-﻿using SB.Domain.Entity.Attributez;
-using SB.Domain.Entity.Base;
+﻿using SB.Domain.Entity.Base;
+using SB.Domain.Entity.Attributez;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SB.Domain.Entity.Hierarchy

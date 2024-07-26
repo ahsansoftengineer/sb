@@ -1,7 +1,7 @@
-﻿using SB.Infra.Entity.Attributez;
-using SB.Infra.Entity.Base;
+﻿using SB.Domain.Entity.Attributez;
+using SB.Domain.Entity.Base;
 
-namespace SB.Infra.Entity.Regionz
+namespace SB.Domain.Entity.Regionz
 {
   public class Country : BaseEntity
   {

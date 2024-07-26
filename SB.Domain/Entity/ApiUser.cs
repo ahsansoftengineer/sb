@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace SB.Infra.Entity
+namespace SB.Domain.Entity
 {
   public class ApiUser : IdentityUser
   {

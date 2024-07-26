@@ -1,9 +1,9 @@
 ﻿using SB.Domain.Enums;
-using SB.Infra.Entity.Extraz;
-using SB.Infra.Entity.Hierarchy;
+using SB.Domain.Entity.Extraz;
+using SB.Domain.Entity.Hierarchy;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SB.Infra.Entity.Donor
+namespace SB.Domain.Entity.Donor
 {
   [Table("DonorGSB")]
   public class DonorGSB : DonorBasic

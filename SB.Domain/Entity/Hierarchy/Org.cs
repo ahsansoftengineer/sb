@@ -1,6 +1,6 @@
-﻿using SB.Infra.Entity.Base;
+﻿using SB.Domain.Entity.Base;
 
-namespace SB.Infra.Entity.Hierarchy
+namespace SB.Domain.Entity.Hierarchy
 {
   public class Org : BaseEntity
   {

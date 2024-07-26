@@ -1,4 +1,4 @@
-﻿namespace SB.Infra.Entity.Base
+﻿namespace SB.Domain.Entity.Base
 {
   public abstract class AlphaEntity
   {

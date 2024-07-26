@@ -1,10 +1,10 @@
 ﻿using SB.Domain.Enums;
-using SB.Infra.Entity.Base;
-using SB.Infra.Entity.Hierarchy;
-using SB.Infra.Entity.Regionz;
+using SB.Domain.Entity.Base;
+using SB.Domain.Entity.Hierarchy;
+using SB.Domain.Entity.Regionz;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SB.Infra.Entity.Donor
+namespace SB.Domain.Entity.Donor
 {
   [Table("DonorBasic")]
   public class DonorBasic : BaseEntity

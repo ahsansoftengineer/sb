@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SB.Domain.Enums;
-using SB.Infra.Config;
-using SB.Infra.Entity;
-using SB.Infra.Entity.Extraz;
-using SB.Infra.Entity.Hierarchy;
+// using SB.Domain.Enums;
+// using SB.Infra.Config;
+// // using SB.Domain.Entity;
+// using SB.Domain.Entity.Hierarchy;
 
 namespace SB.Infra.Context
 {

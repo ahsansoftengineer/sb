@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SB.Infra.Context;
-using SB.Infra.Entity.Base;
+using SB.Domain.Entity.Base;
 
 namespace SB.Infra.Repo
 {

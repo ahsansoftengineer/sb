@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using SB.Infra.Entity.Attributez;
+using SB.Domain.Entity.Attributez;
 using System.Reflection;
 
 namespace SB.Infra.Repo.Operationz

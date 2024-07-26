@@ -1,4 +1,4 @@
-﻿using SB.Infra.Entity.Hierarchy;
+﻿using SB.Domain.Entity.Hierarchy;
 
 namespace SB.Infra.Repo
 {

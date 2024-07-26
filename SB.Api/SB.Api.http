@@ -1,6 +1,6 @@
 @SB.Api_HostAddress = http://localhost:5169
 
 GET {{SB.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+Accept: App/json
 
 ###

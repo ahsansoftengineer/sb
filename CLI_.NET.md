@@ -62,7 +62,7 @@ dotnet new <TEMPLATE>
 ### What does dotnet run under the hood?
 - dotnet run 4 things
 1. restore based on project.cs -> Download Dependencies
-2. build -> compiled the application
+2. build -> compiled the App
 3. run the project
 4. Open the Default Browser and Load the page
 
@@ -83,7 +83,7 @@ dotnet run
     [--project <PATH>] // path/where/project_created
     [-r|--runtime <RUNTIME_IDENTIFIER>]
     [-v|--verbosity <LEVEL>] 
-    [[--] [application arguments]]
+    [[--] [App arguments]]
 
 dotnet run -h|--help
 ```

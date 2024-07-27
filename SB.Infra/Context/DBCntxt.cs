@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+// using Microsoft.AspNetCore.Identity;
 // using SB.Domain.Enums;
 // using SB.Infra.Config;
+// using SB.Infra.Entity;
 // // using SB.Domain.Entity;
 // using SB.Domain.Entity.Hierarchy;
 
 namespace SB.Infra.Context
 {
-  public class DBCntxt : IdentityDbContext<ApiUser>
+  public class DBCntxt : IdentityDbContext<IdentityUser>
   {
     public DBCntxt(DbContextOptions options) : base(options) { }
     // public DbSet<Org> Orgs { get; set; }

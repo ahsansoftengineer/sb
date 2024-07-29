@@ -11,8 +11,8 @@ namespace SB.Infra.Repo
       List<string>? includes = null
     );
     //Task<IPagedList<T>> Gets(BasePagination req, List<string>? includes = null);
-    Task<IPagedList<T>> Gets<TDto>(PaginateRequestFilter<T, TDto?> req)
-      where TDto : class;
+    // Task<IPagedList<T>> Gets<TDto>(PaginateRequestFilter<T, TDto?> req)
+    //   where TDto : class;
 
     Task Insert(T entity);
     Task InsertRange(IEnumerable<T> entities);

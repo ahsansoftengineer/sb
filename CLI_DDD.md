@@ -31,10 +31,10 @@ more./SolutionName.sln # ??
 ### ADDING LOCAL PROJECTS
 ```bash
 dotnet build
-dotnet add ./SB.Api/ reference ./SB.Contracts/ ./SB.App/
-dotnet add ./SB.Infra/ reference ./SB.App/
+dotnet add ./SB.Api/ reference ./SB.Contracts/ # ./SB.App/
+# dotnet add ./SB.Infra/ reference ./SB.App/
 dotnet add ./SB.Infra/ reference ./SB.Domain/
-dotnet add ./SB.App/ reference ./SB.Domain/
+# dotnet add ./SB.App/ reference ./SB.Domain/
 dotnet add ./SB.Api/ reference ./SB.Infra/
 ```
 ### RUNNING PROJECTS
@@ -63,18 +63,19 @@ dotnet add ./SB.App/ package Microsoft.Extensions.DependencyInjection.Abstractio
 
 dotnet add ./SB.Domain/ package ErrorOr # Recommended and Final Approach
 
-dotnet add package DynamicExpressions.NET
-dotnet add package LinqKit.Core
-dotnet add package Microsoft.EntityFrameworkCore 
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Microsoft.EntityFrameworkCore.DynamicLinq
-dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
-dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
-dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
-dotnet add package Microsoft.Extensions.Configuration
-dotnet add package Microsoft.Extensions.Options.ConfigurationExtensions
-dotnet add package X.PagedList.Mvc.Core
+dotnet add ./SB.Infra/ package DynamicExpressions.NET
+dotnet add ./SB.Infra/ package LinqKit.Core
+dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore 
+dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.Design
+dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.DynamicLinq
+dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Authentication.OpenIdConnect
+dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+dotnet add ./SB.Infra/ package Microsoft.Extensions.Configuration
+dotnet add ./SB.Infra/ package Microsoft.Extensions.Options.ConfigurationExtensions
+dotnet add ./SB.Infra/ package X.PagedList
+dotnet add ./SB.Infra/ package X.PagedList.Mvc.Core
 ```
 ### GIT
 ```bash

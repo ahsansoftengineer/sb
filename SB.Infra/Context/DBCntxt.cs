@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-// using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using SB.Infra.Config;
 // using SB.Domain.Enums;
 // using SB.Infra.Config;
 // using SB.Infra.Entity;
-// // using SB.Domain.Entity;
+// using SB.Domain.Entity;
 // using SB.Domain.Entity.Hierarchy;
 
 namespace SB.Infra.Context
@@ -29,12 +31,12 @@ namespace SB.Infra.Context
     //{
     //  base.OnConfiguring(optionsBuilder);
     //}
-    //protected override void OnModelCreating(ModelBuilder builder)
-    //{
+    // protected override void OnModelCreating(ModelBuilder builder)
+    // {
     //  builder.ApplyConfigurationsFromAssembly(
     //    typeof(SBDbContext).Assembly
     //  );
     //  base.OnModelCreating(builder);
-    //}    
+    // }    
   }
 }

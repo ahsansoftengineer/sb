@@ -33,7 +33,7 @@ namespace SB.Infra.Repo.Operationz
   }
   public class CustomStringComparer : IComparer<string>
   {
-    public int Compare(string x, string y)
+    public int Compare(string? x, string? y)
     {
       // Customize the comparison logic here
       return string.Compare(x, y, StringComparison.OrdinalIgnoreCase);
@@ -42,7 +42,7 @@ namespace SB.Infra.Repo.Operationz
 
   public class CustomStringEqualityComparer : IEqualityComparer<string>
   {
-    public bool Equals(string x, string y)
+    public bool Equals(string? x, string? y)
     {
       // Customize the string comparison logic here
       return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);

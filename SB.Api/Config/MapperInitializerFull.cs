@@ -1,14 +1,4 @@
-﻿using SB.Domain.DTOs.SB;
-using SB.Domain.DTOs.MadaniBastaDTOz;
-using SB.Domain.DTOs.Hierarchy;
-using SB.Infra.Entity.SBz;
-using SB.Infra.Entity.Hierarchy;
-using SB.Infra.Entity.MadaniBastaEntity;
-using SB.Infra.Entity.Regionz;
-using SB.Domain.DTOs.Regionz;
-using SB.Infra.Entity.Donor;
-using SB.Domain.DTOs.Donor;
-
+﻿
 namespace SB.API.Config
 {
   public class MapperInitializerFull : MapperInitializerCommon

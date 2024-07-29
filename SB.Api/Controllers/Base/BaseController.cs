@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using SB.Domain.Base;
-using SB.Infra.Entity.Base;
+using SB.Domain.Entity.Base;
 using SB.Infra.Repo;
 using SB.Infra.UOW;
 using X.PagedList;
-
 namespace SB.API.Controllers.Base
 {
     public class BaseController<TController, TEntity, DtoSearch, DtoResponse, DtoCreate>
     : AlphaController<TController>
-    //where TEntity : class
+    // where TEntity : class
     where TEntity : AlphaEntity
     where DtoSearch : class
     where DtoResponse : class

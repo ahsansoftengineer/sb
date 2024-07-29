@@ -2,12 +2,9 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
-using SB.API.Common;
 using SB.Domain.Common;
 using SB.Infra.Context;
-using SB.Infra.Entity;
 using Swashbuckle.AspNetCore.SwaggerUI;
-
 namespace SB.API.DI
 {
   public static partial class DIExternal
@@ -15,7 +12,7 @@ namespace SB.API.DI
     public static IServiceCollection AddExternalServices(this IServiceCollection services)
     {
       services
-        .ConfigureIdentity()
+        // .ConfigureIdentity()
         .ConfigureVersioning()
         //.ConfigureHttpCacheHeaders() // Enable on Production
         .ConfigureRateLimiting();
@@ -106,19 +103,19 @@ namespace SB.API.DI
       return app;
     }
     // Entity Framework Identity
-    public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
-    {
-      var builder = services
-        .AddIdentityCore<ApiUser>(q => q.User.RequireUniqueEmail = true);
-      builder = new IdentityBuilder(
-        builder.UserType,
-        typeof(IdentityRole), services);
+    // public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
+    // {
+    //   var builder = services
+    //     .AddIdentityCore<ApiUser>(q => q.User.RequireUniqueEmail = true);
+    //   builder = new IdentityBuilder(
+    //     builder.UserType,
+    //     typeof(IdentityRole), services);
 
-      builder
-        .AddEntityFrameworkStores<DBCntxt>()
-          .AddDefaultTokenProviders();
-      return services;
-    }
+    //   builder
+    //     .AddEntityFrameworkStores<DBCntxt>()
+    //       .AddDefaultTokenProviders();
+    //   return services;
+    // }
     // Version URI, Query, Headers
     public static IServiceCollection ConfigureVersioning(this IServiceCollection services)
     {
@@ -178,7 +175,7 @@ namespace SB.API.DI
       });
 
       //services.AddHttpContextAccessor();// Already Configured
-      services.AddScoped<FileUploderz, FileUploderz>();
+      // services.AddScoped<FileUploderz, FileUploderz>();
     }
   }
 }

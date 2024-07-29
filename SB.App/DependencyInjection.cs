@@ -10,15 +10,15 @@ namespace SB.App
   {
     public static IServiceCollection AddApp(this IServiceCollection Services)
     {
-      Services.AddMediatR(typeof(DependencyInjection).Assembly);
+      Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
-      // Generic Adding Services
-      Services.AddScoped(
-        typeof(IPipelineBehavior<,>),
-        typeof(ValidationBehavior<,>)
-      );
+      // // Generic Adding Services
+      // Services.AddScoped(
+      //   typeof(IPipelineBehavior<,>),
+      //   typeof(ValidationBehavior<,>)
+      // );
 
-      Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+      // Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
       return Services;
     }

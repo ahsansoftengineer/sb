@@ -1,22 +1,22 @@
 ﻿
-using SB.Domain.Menu;
-using ErrorOr;
-using MediatR;
+// using SB.Domain.Menu;
+// using ErrorOr;
+// using MediatR;
 
-namespace SB.App.Menus.Commands.CreateMenu
-{
-  public record CreateMenuCommand(
-    Guid HostId,
-    string Name,
-    string Description,
-    List<MenuSectionCommand> Sections) : IRequest<ErrorOr<Menu>>;
+// namespace SB.App.Menus.Commands.CreateMenu
+// {
+//   public record CreateMenuCommand(
+//     Guid HostId,
+//     string Name,
+//     string Description,
+//     List<MenuSectionCommand> Sections) : IRequest<ErrorOr<Menu>>;
 
-  public record MenuSectionCommand(
-    string Name,
-    string Description,
-    List<MenuItemCommand> Items);
+//   public record MenuSectionCommand(
+//     string Name,
+//     string Description,
+//     List<MenuItemCommand> Items);
 
-  public record MenuItemCommand(
-    string Name,
-    string Description);
-}
+//   public record MenuItemCommand(
+//     string Name,
+//     string Description);
+// }

@@ -31,10 +31,10 @@ more./SolutionName.sln # ??
 ### ADDING LOCAL PROJECTS
 ```bash
 dotnet build
-dotnet add ./SB.Api/ reference ./SB.Contracts/ # ./SB.App/
-# dotnet add ./SB.Infra/ reference ./SB.App/
+dotnet add ./SB.Api/ reference ./SB.Contracts/ ./SB.App/
+dotnet add ./SB.Infra/ reference ./SB.App/
 dotnet add ./SB.Infra/ reference ./SB.Domain/
-# dotnet add ./SB.App/ reference ./SB.Domain/
+dotnet add ./SB.App/ reference ./SB.Domain/
 dotnet add ./SB.Api/ reference ./SB.Infra/
 ```
 ### RUNNING PROJECTS
@@ -52,6 +52,14 @@ dotnet user-secrets list --project ./SB.Api/
 ### EXTERNAL PACKAGES
 - Adding Packages to Specific Project
 ```bash
+dotnet add ./SB.Api/ package AutoMapper 
+dotnet add ./SB.Api/ package AspNetCoreRateLimit 
+dotnet add ./SB.Api/ package Marvin.Cache.Headers 
+dotnet add ./SB.Api/ package Microsoft.AspNetCore.Mvc.Versioning 
+dotnet add ./SB.Api/ package Microsoft.EntityFrameworkCore.Design 
+dotnet add ./SB.Api/ package Microsoft.EntityFrameworkCore.Tools 
+dotnet add ./SB.Api/ package X.PagedList.Mvc.Core 
+
 dotnet add ./SB.App/ package OneOf # Drawback of Scalability used in App Layer
 dotnet add ./SB.App/ package FluentResults # It has Lack Some Ability of OneOf used in App Layer
 dotnet add ./SB.App/ package FluentValidation
@@ -67,7 +75,7 @@ dotnet add ./SB.Infra/ package DynamicExpressions.NET
 dotnet add ./SB.Infra/ package LinqKit.Core
 dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore 
 dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.Design
+# dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.Design
 dotnet add ./SB.Infra/ package Microsoft.EntityFrameworkCore.DynamicLinq
 dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Authentication.JwtBearer
 dotnet add ./SB.Infra/ package Microsoft.AspNetCore.Authentication.OpenIdConnect

@@ -1,10 +1,10 @@
-﻿using SB.Domain.SimpleAggregates;
+﻿// using SB.Domain.SimpleAggregates;
 
-namespace SB.App.Common.Persistence
-{
-  // Base Interface
-  public interface ISimpleRepo<TEntity>
-  {
-    void Add(TEntity menu);
-  }
-}
+// namespace SB.App.Common.Persistence
+// {
+//   // Base Interface
+//   public interface ISimpleRepo<TEntity>
+//   {
+//     void Add(TEntity menu);
+//   }
+// }

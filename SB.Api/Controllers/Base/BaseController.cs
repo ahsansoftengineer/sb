@@ -4,7 +4,9 @@ using SB.Domain.Base;
 using SB.Domain.Entity.Base;
 using SB.Infra.Repo;
 using SB.Infra.UOW;
-using X.PagedList;
+// using X.PagedList;
+using SB.Infra.Repo.Helper;
+
 namespace SB.API.Controllers.Base
 {
     public class BaseController<TController, TEntity, DtoSearch, DtoResponse, DtoCreate>
@@ -28,7 +30,7 @@ namespace SB.API.Controllers.Base
       try
       {
         var list = await Repo.Gets(filter);
-        var result = Mapper.Map<IPagedList<TEntity>, PaginateResponse<DtoResponse>>(list);
+        var result = Mapper.Map<PaginatedList<TEntity>, PaginateResponse<DtoResponse>>(list);
         return Ok(result);
       }
       catch (Exception ex)

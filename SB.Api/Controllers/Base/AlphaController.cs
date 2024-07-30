@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SB.Infra.UOW;
 using SB.Domain.Entity.Base;
-
+using SB.Infra.Repo.Helper;
 
 namespace SB.API.Controllers.Base
 {

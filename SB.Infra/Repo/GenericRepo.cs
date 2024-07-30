@@ -58,31 +58,31 @@ namespace SB.Infra.Repo
       return result; //if (result != null) return result; //
     }
 
-    public async Task<List<T>> Gets(
-      Expression<Func<T, bool>>? expression = null,
-      Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
-      List<string>? includes = null)
-    {
-      IQueryable<T> query = _db;
-      if (expression != null)
-      {
-        query = query.Where(expression);
-      }
+    // public async Task<List<T>> Gets(
+    //   Expression<Func<T, bool>>? expression = null,
+    //   Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+    //   List<string>? includes = null)
+    // {
+    //   IQueryable<T> query = _db;
+    //   if (expression != null)
+    //   {
+    //     query = query.Where(expression);
+    //   }
 
-      if (includes != null)
-      {
-        foreach (var item in includes)
-        {
-          query = query.Include(item);
-        }
-      }
+    //   if (includes != null)
+    //   {
+    //     foreach (var item in includes)
+    //     {
+    //       query = query.Include(item);
+    //     }
+    //   }
 
-      if (orderBy != null)
-      {
-        query = orderBy(query);
-      }
-      return await query.AsNoTracking().ToListAsync();
-    }
+    //   if (orderBy != null)
+    //   {
+    //     query = orderBy(query);
+    //   }
+    //   return await query.AsNoTracking().ToListAsync();
+    // }
     public async Task<PaginatedList<T>> Gets<TDto>(PaginateRequestFilter<T, TDto>? req)
       where TDto : class
     {

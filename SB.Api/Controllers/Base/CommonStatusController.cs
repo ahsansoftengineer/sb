@@ -4,6 +4,7 @@ using SB.Domain.Common;
 using SB.Domain.Enums;
 using SB.Infra.UOW;
 using SB.Domain.Entity.Base;
+using SB.Infra.Repo.Helper;
 
 
 namespace SB.API.Controllers.Base

@@ -16,7 +16,7 @@ namespace SB.API.DI
       // API Caching 6: Adding Services Extensions
       // services.ConfigureHttpCacheHeaders();
       services.AddAuthentication();
-      services.ConfigureIdentity();
+      // services.ConfigureIdentity();
       services.ConfigureCors();
       //services.AddAutoMapper(typeof(MapperInitializer)); // Later
       // Transient Means Fresh Copy

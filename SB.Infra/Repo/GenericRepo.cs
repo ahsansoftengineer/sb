@@ -3,7 +3,7 @@ using SB.Domain.Base;
 using SB.Infra.Context;
 using SB.Infra.Repo.Operationz;
 using System.Linq.Expressions;
-using X.PagedList;
+using SB.Infra.Repo.Helper;
 
 namespace SB.Infra.Repo
 {
@@ -83,32 +83,32 @@ namespace SB.Infra.Repo
       }
       return await query.AsNoTracking().ToListAsync();
     }
-    // public async Task<IPagedList<T>> Gets<TDto>(PaginateRequestFilter<T, TDto>? req)
-    //   where TDto : class
-    // {
-    //   if (req == null)
-    //   {
-    //     req = new PaginateRequestFilter<T, TDto>()
-    //     {
-    //       PageNo = 1,
-    //       PageSize = 2,
-    //       Sort = null,
-    //       Search = null
-    //     };
-    //   }
+    public async Task<PaginatedList<T>> Gets<TDto>(PaginateRequestFilter<T, TDto>? req)
+      where TDto : class
+    {
+      if (req == null)
+      {
+        req = new PaginateRequestFilter<T, TDto>()
+        {
+          PageNo = 1,
+          PageSize = 2,
+          Sort = null,
+          Search = null
+        };
+      }
 
-    //   IQueryable<T> query = _db;
-    //   //query = query.FilterByGeneric<T, TDto>(req.Search);
-    //   //query = query.OrderByGeneric<T>(req.Sort);
-    //   // Simplified Form
-    //   query = query.FilterByGeneric(req.Search);
-    //   query = query.OrderByGeneric(req.Sort);
-    //   query = query.IncluesByGeneric(req.includes);
+      IQueryable<T> query = _db;
+      //query = query.FilterByGeneric<T, TDto>(req.Search);
+      //query = query.OrderByGeneric<T>(req.Sort);
+      // Simplified Form
+      query = query.FilterByGeneric(req.Search);
+      query = query.OrderByGeneric(req.Sort);
+      query = query.IncluesByGeneric(req.includes);
 
-    //   return await query
-    //     .AsNoTracking();
-    //     // .ToPagedListAsync(req.PageNo, req.PageSize);
-    // }
+      return await query
+        .AsNoTracking()
+        .ToPaginatedListAsync(req.PageNo, req.PageSize);
+    }
   }
 }
 /**

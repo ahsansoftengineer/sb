@@ -31,11 +31,9 @@ more./SolutionName.sln # ??
 ### ADDING LOCAL PROJECTS
 ```bash
 dotnet build
-dotnet add ./SB.Api/ reference ./SB.Contracts/ ./SB.App/
-dotnet add ./SB.Infra/ reference ./SB.App/
-dotnet add ./SB.Infra/ reference ./SB.Domain/
+dotnet add ./SB.Api/ reference ./SB.Contracts/ ./SB.App/ ./SB.Infra/
+dotnet add ./SB.Infra/ reference ./SB.App/ ./SB.Domain/
 dotnet add ./SB.App/ reference ./SB.Domain/
-dotnet add ./SB.Api/ reference ./SB.Infra/
 ```
 ### RUNNING PROJECTS
 ```bash

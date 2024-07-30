@@ -22,7 +22,7 @@ namespace SB.API
       services.AddInfrastructure(Configuration);
 
     }
-    public void Configure(IAppBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       app.AddExternalConfiguration(env);
       app.UseCors("CorsPolicyAllowAll");

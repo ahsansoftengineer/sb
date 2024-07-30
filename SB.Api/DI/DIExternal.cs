@@ -19,7 +19,7 @@ namespace SB.API.DI
       services.ConfigureFileHandling();
       return services;
     }
-    public static IAppBuilder AddExternalConfiguration(this IAppBuilder app, 
+    public static IApplicationBuilder AddExternalConfiguration(this IApplicationBuilder app, 
       IWebHostEnvironment env)
     {
       app.ConfigureStaticFilesHandling();
@@ -51,7 +51,7 @@ namespace SB.API.DI
 
       return app;
     }
-    public static void ConfigureStaticFilesHandling(this IAppBuilder app)
+    public static void ConfigureStaticFilesHandling(this IApplicationBuilder app)
     {
       app.UseStaticFiles(); // Enable static file serving
       // https://localhost:5001/FooterImg348db3b7-e6dc-47f6-8bcd-74f6a35e7859.jpg
@@ -64,7 +64,7 @@ namespace SB.API.DI
         RequestPath = "/assets"
       });
     }
-    public static void ConfigureDevEnv(this IAppBuilder app, IWebHostEnvironment env)
+    public static void ConfigureDevEnv(this IApplicationBuilder app, IWebHostEnvironment env)
     {
 
       if (env.IsDevelopment())
@@ -78,7 +78,7 @@ namespace SB.API.DI
         });
       }
     }
-    public static IAppBuilder ConfigureExceptionHandler(this IAppBuilder app)
+    public static IApplicationBuilder ConfigureExceptionHandler(this IApplicationBuilder app)
     {
       app.UseExceptionHandler(error =>
       {

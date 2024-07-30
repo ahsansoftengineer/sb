@@ -1,6 +1,7 @@
 ﻿using SB.Domain.Base;
 using System.Linq.Expressions;
-using X.PagedList;
+
+using SB.Infra.Repo.Helper;
 
 namespace SB.Infra.Repo
 {
